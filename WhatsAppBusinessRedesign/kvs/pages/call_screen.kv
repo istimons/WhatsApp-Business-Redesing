@@ -1,0 +1,95 @@
+<CallScreen>:
+    MDBoxLayout: 
+        orientation: "vertical"
+        md_bg_color: app.theme_cls.bg_normal
+
+        MDBoxLayout:
+            orientation: 'horizontal'
+            size: (1700, 50)
+            size_hint: (None, None)
+            spacing: 2
+            MDIconButton: 
+                icon: 'link-plus'
+                theme_text_color: 'Custom'
+                pos_hint: {'center_y': .5}
+                text_color: [1, 1, 1, 1]
+                md_bg_color: app.theme_cls.accent_color
+                size: (40, 40)
+                size_hint: (None, None)
+
+            TwoLineListItem:
+                text: "[color=#111111]Create call link[/color]"        
+                secondary_text: "[color=#808080]Share a link for your WhatsApp call[/color]"
+                pos_hint: {"center_y": .5}
+                _no_ripple_effect: True
+
+        ScrollView:
+            do_scroll_y: True
+            bar_width: 0
+            MDBoxLayout:
+                adaptive_height: True
+                # size_hint_y: None
+                orientation: 'vertical'
+                md_bg_color: app.theme_cls.bg_normal
+                CallListItem:
+                    friend_name: 'Gustavo'
+                    call_date: 'Jan 14, 11:26 PM'
+                    call_type: 'out'
+                    call_mode: 'video'
+                    friend_avatar: 'assets/images/gus.png'
+                    count: '1'
+                    isMissed: False
+        
+                CallListItem:
+                    friend_name: 'Elon'
+                    call_date: 'Jan 14, 11:26 PM'
+                    call_type: 'out'
+                    call_mode: 'video'
+                    friend_avatar: 'assets/images/cybertruck.png'
+                    count: '1'
+                    isMissed: False
+
+                CallListItem:
+                    friend_name: 'Okwonkwo'
+                    call_date: 'Jan 14, 11:26 PM'
+                    call_type: 'out'
+                    call_mode: 'video'
+                    friend_avatar: 'assets/images/okwonkwo.png'
+                    count: '1'
+                    isMissed: False                    
+
+
+                CallListItem:
+                    friend_name: 'Ruto'
+                    call_date: 'Jan 14, 11:26 PM'
+                    call_type: 'out'
+                    call_mode: 'video'
+                    friend_avatar: 'assets/images/ruto.png'
+                    count: '1'
+                    isMissed: False
+
+
+                CallListItem:
+                    friend_name: 'J.B Peterson'
+                    call_date: 'Jan 14, 11:26 PM'
+                    call_type: 'out'
+                    call_mode: 'video'
+                    friend_avatar: 'assets/images/jb.png'
+                    count: '1'
+                    isMissed: False
+
+
+                CallListItem:
+                    friend_name: 'Mars'
+                    call_date: 'Jan 14, 11:26 PM'
+                    call_type: 'out'
+                    call_mode: 'video'
+                    friend_avatar: 'assets/images/mars.png'
+                    count: '1'
+                    isMissed: False
+
+           
+    MDBoxLayout:
+        pos_hint: {"center_x": .9}
+        size_hint_x: .1
+        CallsNavBar:

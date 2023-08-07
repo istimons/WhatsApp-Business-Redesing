@@ -1,0 +1,58 @@
+<NavBar@MDBoxLayout>:
+
+    orientation: 'vertical'
+    size_hint_y: None
+    padding: [0, 0, 0, 10]
+    one: [1, 1, 1, .5]
+    two: [1, 1, 1, .5]
+    three: [1, 1, 1, .5]
+    four: [1, 1, 1, .5]    
+    MDCard:
+        id: navBar
+        radius: [18, ]
+        md_bg_color: app.theme_cls.primary_color
+        padding: [10, 0, 10, 0]
+        size_hint_y: None
+        size_hint_x: None
+        width: 180
+        height: 40
+        pos_hint: {'center_x': .7}
+
+        NavIcon:
+            text_color: root.one
+            on_press: app.switch_screen('main_screen')
+            icon: 'message-minus-outline'
+
+        MDLabel:
+            text: 'Send messsage'
+            text_color: root.two
+            size_hint_x: 0.2
+
+            
+<NavIcon@MDIconButton>:    
+    pos_hint: {'center_y': .5}
+    theme_text_color: 'Custom'
+    size_hint_x: .1
+    user_font_size: 10
+    size: 45, 45
+
+        
+<StatusNavBar@MDBoxLayout>:
+    orientation: 'vertical'
+    MDIconButton:
+        icon: 'pencil'
+        theme_icon_color: "Custom"
+        md_bg_color: 'teal'        
+
+    MDIconButton:
+        icon: 'camera'
+        theme_icon_color: "Custom"
+        md_bg_color: 'teal'        
+
+
+<CallsNavBar@MDBoxLayout>:
+    orientation: 'vertical'
+    MDIconButton:
+        icon: 'phone-plus'
+        theme_icon_color: "Custom"
+        md_bg_color: 'teal'

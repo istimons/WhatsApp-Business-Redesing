@@ -1,0 +1,148 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+
+<CatalogScreen>:
+
+    ScrollView:
+        do_scroll_y: True
+        effect_cls: 'ScrollEffect'
+        bar_width: 0
+
+        MDBoxLayout:
+            orientation: 'vertical'
+            size_hint_y: 1
+            adaptive_height: True
+            spacing: 2
+
+            MDBoxLayout:
+                orientation: 'horizontal'
+                size_hint: (None, None)
+                size: (1700, 40)
+                spacing: 2
+                MDLabel:
+                    text: "  Grow your business"
+                    theme_text_color: "Custom"
+                    text_color: app.theme_cls.primary_color
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                size_hint: (.95, None)   
+                size: (60, 200)             
+                pos_hint: {"center_x": .5, "center_y": .5}           
+                spacing: 2 
+                line_color: 'gray'    
+                radius: [10, ]         
+                padding: 0, 0, 0, "26dp"   # for text alignment (spacing)
+                                    
+                MDIconButton:
+                    icon: 'speaker'  
+                    pos_hint: {"center_x": .5, "center_y": .5}    
+                    size_hint: (None, 0.2)                          
+                MDLabel:
+                    halign: 'center'
+                    valign: 'center'
+                    text:'Create your first ad'  
+                    pos_hint: {"center_x": .5, "center_y": .5}    
+                    font_size: 15
+                    size_hint: (1, 0.2)
+
+                MDLabel:
+                    halign: 'center'
+                    valign: 'center'
+                    text: 'Reach new customers on Facebook & Instagram with ads that lead to WhatsApp '
+                    theme_text_color: "Custom"
+                    text_color: app.theme_cls.primary_color
+                    pos_hint: {"center_x": .5, "center_y": .5}   
+                    font_size: 12
+                    size_hint: (1, 0.2)
+
+                MDFloatLayout:
+                    pos_hint: {"center_x": .75, "center_y": 5}
+                    size_hint: (0.2, 0.2)                    
+                    color: [1, 0, 30, 2]
+                    # md_bg_color: app.theme_cls.primary_color
+                    
+                    MDRoundFlatButton:
+                        text: 'Get started'
+                        md_bg_color: 'teal'
+                        theme_text_color: 'Custom'
+                        text_color: 'white'
+                        pos_hint: {"center_x": .9, "center_y": 0}
+                        size_hint: (1, 0.2)
+
+            MDBoxLayout:
+                orientation: 'horizontal'
+                size_hint: (None, None)
+                size: (1700, 40)
+                spacing: 2
+                MDLabel:
+                    text: "  Business tools"
+                    theme_text_color: "Custom"
+                    text_color: app.theme_cls.primary_color
+
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                adaptive_height: True
+                padding: [0, 0, 0, 40]
+
+                MDList:
+
+                    TwoLineIconListItem:
+                        text: "Business Profile"
+                        secondary_text: "Manage address, hours, and websites"
+                        divider: None
+                        
+                        IconLeftWidget:
+                            icon: 'store'                
+
+                    TwoLineIconListItem:
+                        text: "Catalog"
+                        secondary_text: "Show products and services"
+                        divider: None
+                        
+                        IconLeftWidget:
+                            icon: 'store'                                        
+
+
+                    TwoLineIconListItem:
+                        text: "Advertise"
+                        secondary_text: "Create ads that lead to WhatsApp"
+                        divider: None
+                        
+                        IconLeftWidget:
+                            icon: 'store'                
+
+                    TwoLineIconListItem:
+                        text: "Facebook and Instagram"
+                        secondary_text: "Add WhatsApp to your accounts"
+                        divider: None
+                        
+                        IconLeftWidget:
+                            icon: 'link'         
+
+
+                    TwoLineIconListItem:
+                        text: "Greeting message"
+                        secondary_text: "Welcome new customers automatically"
+                        divider: None
+                        
+                        IconLeftWidget:
+                            icon: 'message'                
+
+                    TwoLineIconListItem:
+                        text: "Away message"
+                        secondary_text: "Reply automatically when you're away"
+                        divider: None
+                        
+                        IconLeftWidget:
+                            icon: 'umbrella'                                                                                                                       
+
+                    TwoLineIconListItem:
+                        text: "Quick replies"
+                        secondary_text: "Reuse frequent messages"
+                        divider: None
+                        
+                        IconLeftWidget:
+                            icon: 'lightning-bolt'      
+

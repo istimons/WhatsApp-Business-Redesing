@@ -1,0 +1,92 @@
+
+
+<MainScreen>: #1 Create a screen to hold all the content (catalog, chats, status and call tabs)
+    size_hint_x: 1
+    MDBoxLayout: 
+        orientation: "vertical"
+        md_bg_color: app.theme_cls.bg_normal        
+        MDTopAppBar: 
+            id: logoToolBar
+            height: 50
+            title: "WhatsApp Business"
+            text_size: self.size
+            font_size: '9sp'
+            markup: True
+            anchor_title: 'left'
+            right_action_items: [['camera', lambda x: x],['account-search', lambda x: x], ['dots-vertical', lambda x: x]]            
+            margin: 0
+            
+        MDTabs:
+            
+            CatalogTab:
+                icon: 'store'
+                CatalogScreen:
+
+            MessageTab:
+                title: 'Chats'
+
+                ScrollView:
+                    do_scroll_y: True
+                    effect_cls: 'ScrollEffect'
+                    bar_width: 0
+                    MDBoxLayout:
+                        adaptive_height: True
+                        orientation: 'vertical'
+                        md_bg_color: app.theme_cls.primary_color
+                        spacing: 20
+                                                    
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            md_bg_color: app.theme_cls.bg_normal
+                            size_hint_y: None
+                            adaptive_height: True
+                            padding: [0, 0, 0, 40]
+                            MDList: #2 add a chatlist to show users in a scrollview
+                                id: chatlist
+                                spacing: 10
+                MDBoxLayout:
+                    size_hint_y: None
+                    md_bg_color: 0, 0, 0, 0
+                    NavBar:
+                        one: [1, 1, 1, 1]
+        
+            StatusTab:
+                title: "Status"
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    adaptive_width: True
+                    spacing: 10
+                    padding: [10, 0, 0, 0]
+                    StatusWithIcon:
+
+                    ScrollView:
+                        do_scroll_y: True
+                        effect_cls: 'ScrollEffect'
+                        bar_width: 0
+                        MDBoxLayout:
+                            adaptive_height: True
+                            orientation: 'vertical'
+                            md_bg_color: app.theme_cls.primary_color
+                            # spacing: 20                            
+                                
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                md_bg_color: app.theme_cls.bg_normal
+                                size_hint_y: None
+                                adaptive_height: True
+                                padding: [0, 0, 0, 40]
+                                MDList: #2 add a chatlist to show users in a scrollview
+                                    id: status_layout
+                                    spacing: 5
+
+                MDBoxLayout:
+                    pos_hint: {"center_x": .9}
+                    size_hint_x: .1
+                    spacing: 4
+                    StatusNavBar:                     
+
+            CallsTab:
+                title: 'Calls'
+                CallScreen:
+        
+     

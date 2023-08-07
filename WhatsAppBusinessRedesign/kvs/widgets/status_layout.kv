@@ -1,0 +1,78 @@
+<StatusIcon>:
+    adaptive_height: True
+    orientation: 'horizontal'
+    size: (360, 45)
+    size_hint: (None, None)
+    spacing: 0
+    padding: [0, 0, 0, 10]
+
+    StatusListItem:
+        friend_name: '{}'.format(root.text) 
+        post_time: '{}'.format(root.time)
+        friend_avatar: '{}'.format(root.source)
+
+
+
+<StatusWithIcon@MDBoxLayout>:
+    orientation: 'horizontal'
+    size: (1700, 45)
+    size_hint: (None, None)
+    spacing: 2
+    MDIconButton: 
+        icon: 'camera-outline'
+        theme_text_color: 'Custom'
+        pos_hint: {'center_y': .4}
+        text_color: [1, 1, 1, 1]
+        md_bg_color: app.theme_cls.accent_color
+        size: (40, 40)
+        size_hint: (None, None)
+
+    TwoLineListItem:
+        text: "[color=#111111]My status[/color]"        
+        secondary_text: "[color=#808080]Tap to add status update[/color]"
+        pos_hint: {"center_y": .5}
+        _no_ripple_effect: True
+
+
+
+<StatusListItem@MDCard>:
+    ripple_behavior: True
+    md_bg_color: 0, 0, 0, 0
+    elevation: 0
+    size_hint_y: None
+    padding: [10, 0, 10, 0]
+    spacing: 10
+    height: chatAvatar.height + 10
+    friend_name: 'Name'
+    post_time: 'Jan 14, 9:41 PM'
+    friend_avatar: 'assets/images/data.jpg'
+
+    Avatar:
+        id: chatAvatar
+        source: root.friend_avatar
+        pos_hint: {"center_y": .5}
+        radius: [30, ]
+
+    MDBoxLayout:
+        orientation: "vertical"
+        padding: [0, 0, 0, 10]
+        spacing: 2
+        Label:
+            text: root.friend_name
+            theme_text_color: 'Custom'
+            size: self.texture_size
+            size_hint_y: None
+            size_hint_x: None
+            font_size: 15
+            color: app.theme_cls.opposite_bg_normal
+            bold: True
+            
+        Label:
+            text: '{}'.format(root.post_time)
+            size: self.texture_size
+            theme_text_color: 'Custom'
+            size_hint_y: None
+            size_hint_x: None
+            bold: True
+            font_size: 13
+            color: [.5, .5, .5, 1]        
