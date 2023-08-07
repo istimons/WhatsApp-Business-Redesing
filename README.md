@@ -2,8 +2,6 @@
 Redesigned WhatsApp Business Using KivyMD,Kivy &amp; Python. 
 **GitHub Repository: Redesigned WhatsApp Business**
 
-![WhatsApp Business Redesign](https://github.com/istimons/WhatsApp-Business-Redesing/tree/main)
-
 ## Description
 
 ### Redesigned WhatsApp Business
