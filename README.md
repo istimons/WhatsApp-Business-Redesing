@@ -10,6 +10,10 @@ Hello, GitHub community! I am excited to share my latest project – a complete 
 aimed at testing KivyMD limits. KivyMD is a Python framework for creating cross-platform mobile applications with a Material Design user interface.
 This repository contains all the code and design assets for the redesigned WhatsApp Business.
 
+
+
+![Alt text](/WhatsAppBusinessRedesign/assets/images/callScreen.png "Call screen")
+
 ## Features
 
 - **Modern UI**: The new KivyMD design boasts a contemporary user interface with cleaner layouts, improved typography, and a cohesive color scheme
