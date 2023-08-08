@@ -12,7 +12,7 @@ This repository contains all the code and design assets for the redesigned Whats
 
 
 
-![Alt text](/WhatsAppBusinessRedesign/assets/images/callScreen.png "Call screen")
+![Calls Screen](https://github.com/istimons/WhatsApp-Business-Redesing/blob/main/WhatsAppBusinessRedesign/assets/images/callScreen.png)
 
 ## Features
 
