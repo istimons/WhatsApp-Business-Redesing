@@ -52,11 +52,14 @@ To try out the redesigned WhatsApp Business locally, follow these steps:
 git clone https://github.com/yourusername/WhatsApp-Business-Redesing.git  
 ```
 
-2. Open the project in your preferred code editor.
+2. Open the project in your preferred command line/terminal.
 
-3. Install Python anf Kivy, KivyMD if not installed.
+3. Install Python and Kivy, KivyMD if not installed.
 
-4. Run the main.py file:
+4. Run the command below:
+```bash
+python3 main.py -m screen:phone_oneplus_6t,portrait,scale=.3
+```
 
 
 ## Feedback and Support
